@@ -1,0 +1,5 @@
+#id=s1##
+#title=scene1##
+#tasks=scene1_task1;scene1_task2;scene1_task3##
+#npcs=Aria(12, 11);Oliver(19, 10);Nigolas(19, 13)##
+#monsters=monster1(220, 50)##

@@ -1,0 +1,14 @@
+#trigger=(TYPE=TALK_TO_NPC, TARGET=Nigolas,)##
+
+#taskName=记得犁田##
+
+#requirement=NONE##
+
+#taskSteps=
+(TYPE=TALK, TARGET=Nigolas, DIALOG=task3_dialog1,);
+(TYPE=TALK, TARGET=Oliver, DIALOG=task3_dialog2,);
+(TYPE=TALK, TARGET=Aria, DIALOG=task3_dialog3,);
+(TYPE=TALK, TARGET=Oliver, DIALOG=task3_dialog3-1,);
+(TYPE=TALK, TARGET=Nigolas, DIALOG=task3_dialog4,);##
+
+#taskReward=(TYPE=REWARD_MONEY, AMOUNT=200,)##

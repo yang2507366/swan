@@ -1,0 +1,4 @@
+#FROM=HERO, TYPE=NORMAL,  CONTENT=Nigolas让我告诉你，星期六记得去帮他犁田。,##
+#FROM=Oliver, TYPE=NORMAL,  CONTENT=哎哟，我差点把这事给忘了，犁田的工具还在Aria那里，能否帮我去取回来？,##
+#FROM=HERO, TYPE=NORMAL,  CONTENT=好的，我这就去取。,##
+#FROM=Oliver, TYPE=NORMAL,  CONTENT=谢谢 哈哈！,##

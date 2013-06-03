@@ -1,0 +1,4 @@
+#FROM=Oliver, TYPE=NORMAL,  CONTENT=这位小哥，能否帮我一个小忙？,##
+#FROM=HERO, TYPE=NORMAL, CONTENT=请说。,##
+#FROM=Oliver, TYPE=ASK_TASK, CONTENT=我一个月前把腿给摔断了，到现在都还不能走路，能否帮我把这个还给Aria。,##
+#FROM=Oliver, TYPE=NORMAL,  CONTENT=我等着你回来。,##

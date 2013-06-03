@@ -1,0 +1,12 @@
+#trigger=(TYPE=TALK_TO_NPC, TARGET=Oliver,)##
+
+#taskName=吵架的好友##
+
+#requirement=NONE##
+
+#taskSteps=
+(TYPE=TALK, TARGET=Oliver, DIALOG=task2_dialog1,);
+(TYPE=TALK, TARGET=Aria, DIALOG=task2_dialog3,);
+(TYPE=TALK, TARGET=Oliver, DIALOG=task2_dialog2,);##
+
+#taskReward=(TYPE=REWARD_MONEY, AMOUNT=200,)##

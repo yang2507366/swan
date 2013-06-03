@@ -1,0 +1,5 @@
+#FROM=HERO, TYPE=NORMAL,  CONTENT=听说你找我有事？,##
+#FROM=Nigolas, TYPE=NORMAL,  CONTENT=是的。,##
+#FROM=HERO, TYPE=NORMAL,  CONTENT=啥事？,##
+#FROM=Nigolas, TYPE=ASK_TASK,  CONTENT=你去告诉Oliver，让他记得星期六来帮我犁田。,##
+#FROM=HERO, TYPE=NORMAL,  CONTENT=好的，我现在就去。,##

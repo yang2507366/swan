@@ -1,0 +1,12 @@
+#trigger=(TYPE=TALK_TO_NPC, TARGET=Aria,)##
+
+#taskName=杀死东北部的怪兽##
+
+#requirement=NONE##
+
+#taskSteps=
+  (TYPE=TALK, TARGET=Aria, DIALOG=task1_dialog1,);
+  (TYPE=KILL_MONSTER, TARGET=monster1, AMOUNT=2,);
+  (TYPE=TALK, TARGET=Aria, DIALOG=task1_dialog2,);##
+
+#taskReward=(TYPE=REWARD_MONEY, AMOUNT=200,)##

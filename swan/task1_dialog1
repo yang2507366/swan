@@ -1,0 +1,4 @@
+#FROM=Aria, TYPE=NORMAL, CONTENT=东北边的怪兽把森林都吃光了，这可怎么办啊,##
+#FROM=HERO, TYPE=NORMAL, CONTENT=这是怎么回事？,##
+#FROM=Aria, TYPE=ASK_TASK, CONTENT=半年前，东北边的怪兽把树木都快吃光了，能否帮忙除去这个大患？,##
+#FROM=Aria, TYPE=NORMAL, CONTENT=谢谢，万事小心。,##
