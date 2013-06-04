@@ -9,12 +9,12 @@
 #import "GameLayer.h"
 #import "AnimationUtils.h"
 
-#import "NPC.h"
-#import "Monster.h"
-#import "TaskStep.h"
-#import "StepTalk.h"
-#import "StepKillMonster.h"
-#import "Talk.h"
+#import "RPGNPC.h"
+#import "RPGMonster.h"
+#import "RPGTaskStep.h"
+#import "RPGTaskStepTalk.h"
+#import "RPGTaskStepKillMonster.h"
+#import "RPGTalk.h"
 
 @implementation GameLayer
 
@@ -51,9 +51,9 @@
         _hero.position = ccp(144, 144);
         _heroPosition = _hero.position;
         _heroDirection = RoleDirectionUp;
-        [_hero runAction:[CCRepeatForever actionWithAction:
-                          [CCAnimate actionWithAnimation:[[CCAnimationCache sharedAnimationCache] animationByName:@"HeroWalkUp"] 
-                                    restoreOriginalFrame:NO]]];
+        CCAnimation *anim = [[CCAnimationCache sharedAnimationCache] animationByName:@"HeroWalkUp"];
+        anim.restoreOriginalFrame = YES;
+        [_hero runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:anim]]];
         [self addChild:_hero];
         [self addChild:_map z:-1];
         // init joystick
@@ -61,11 +61,11 @@
         // init rpg scene
         _myTaskArray = [[NSMutableArray alloc] init];
         _finishedTaskArray = [[NSMutableArray alloc] init];
-        _scene = [[Scene alloc] initWithScriptName:@"scene1"];
+        _scene = [[RPGScene alloc] initWithScriptName:@"scene1"];
         
         // add npc to scene
         NSArray *npcArray = _scene.npcArray;
-        for(NPC *npc in npcArray){
+        for(RPGNPC *npc in npcArray){
             [AnimationUtils cacheAnimation:npc.roldId];
             CCSprite *sprite = [[CCSprite alloc] init];
             sprite.position = ccp(npc.position.x * _map.tileSize.width, npc.position.y * _map.tileSize.height);
@@ -73,7 +73,7 @@
             
             CCLabelTTF *lbl = [[CCLabelTTF alloc] initWithString:npc.roldId 
                                                       dimensions:CGSizeMake(80, 20) 
-                                                       alignment:UITextAlignmentCenter 
+                                                       hAlignment:UITextAlignmentCenter 
                                                         fontName:@"Arial" fontSize:12.0f];
             lbl.position = CGPointMake(sprite.position.x, sprite.position.y - 32);
             [_map addChild:lbl z:8];
@@ -85,17 +85,17 @@
         
         // add monster to scene
         NSArray *monsterArray = _scene.monsterArray;
-        for(Monster *monster in monsterArray){
+        for(RPGMonster *monster in monsterArray){
         }
         
         // init dialog
-        CCTexture2D *texture = [[CCTexture2D alloc] initWithImage:[UIImage imageNamed:@"dialog_bg"]];
+        CCTexture2D *texture = [[CCTexture2D alloc] initWithCGImage:[UIImage imageNamed:@"dialog_bg"].CGImage resolutionType:kCCResolutioniPhone];
         _dialog = [[DialogLayer alloc] initWithTexture:texture];
         _dialog.position = ccp(240, 50);
         [_dialog setHidden:YES];
         [self addChild:_dialog];
         
-        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:1 swallowsTouches:YES];
+        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:1 swallowsTouches:YES];
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:) interval:1.0f / 30.0f];
     }
@@ -204,7 +204,8 @@
     }
     if (_heroStateChanged) {
         if (_stickOn) {
-            [_hero runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation restoreOriginalFrame:NO]]];
+            animation.restoreOriginalFrame = YES;
+            [_hero runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]]];
             
         }
     }else{
@@ -227,10 +228,10 @@
     }
 }
 
-- (NPC *)getNpcByPositionX:(NSInteger)x Y:(NSInteger)y
+- (RPGNPC *)getNpcByPositionX:(NSInteger)x Y:(NSInteger)y
 {
     NSArray *npcArray = _scene.npcArray;
-    for(NPC *npc in npcArray){
+    for(RPGNPC *npc in npcArray){
         NSInteger xdis = abs(npc.position.x - x);
         NSInteger ydis = abs(npc.position.y - y);
         if (xdis <= 1 && ydis <= 1) {
@@ -240,16 +241,16 @@
     return nil;
 }
 
-- (Talk *)nextTalk
+- (RPGTalk *)nextTalk
 {
     if ([_talkArray count] != 0) {
-        Talk *talk = [_talkArray objectAtIndex:_talkIndex];
+        RPGTalk *talk = [_talkArray objectAtIndex:_talkIndex];
         return talk;
     }
     return nil;
 }
 
-- (void)alertTalk:(Talk *)talk
+- (void)alertTalk:(RPGTalk *)talk
 {
     _talking = YES;
     [_dialog setTalkContent:talk.content];
@@ -270,20 +271,20 @@
     }
 }
 
-- (void)handleStep:(TaskStep *)step
+- (void)handleStep:(RPGTaskStep *)step
 {
     if (step.type == TaskStepTypeTalk) {
         NSLog(@"stepTalk:%@", step.targetId);
-        StepTalk *stepTalk = (StepTalk *)step;
+        RPGTaskStepTalk *stepTalk = (RPGTaskStepTalk *)step;
         _talkIndex = 0;
         if (_talkArray != nil) {
             [_talkArray release];
         }
         _talkArray = [stepTalk.dialogArray retain];
-        Talk *talk = [self nextTalk];
+        RPGTalk *talk = [self nextTalk];
         [self alertTalk:talk];
     }else if(step.type == TaskStepTypeKillMonster){
-        StepKillMonster *stepKillMonster = (StepKillMonster *)step;
+        RPGTaskStepKillMonster *stepKillMonster = (RPGTaskStepKillMonster *)step;
         stepKillMonster.killedCount += 1;
         NSLog(@"monster kill +1");
         if (stepKillMonster.killedCount == stepKillMonster.needAmount) {
@@ -292,14 +293,14 @@
     }
 }
 
-- (void)handleTalkWithNpc:(NPC *)npc
+- (void)handleTalkWithNpc:(RPGNPC *)npc
 {
     NSLog(@"talk to:%@", npc.roldId);
     
     NSString *npcId = npc.roldId;
     // 检查任务列表中是否有任务步骤与该npc有交集
-    for(Task *taskItem in _myTaskArray){
-        TaskStep *step = [taskItem currentStep];
+    for(RPGTask *taskItem in _myTaskArray){
+        RPGTaskStep *step = [taskItem currentStep];
         NSLog(@"npcId:%@, targetId:%@", npcId, step.targetId);
         if (step.type == TaskStepTypeTalk && [step.targetId isEqualToString:npcId]) {
             self.currentTask = taskItem;
@@ -309,12 +310,12 @@
     }
     
     // 检查是否可以获取任务
-    Task *task = [_scene getTaskByTalkToNPC:npcId];
+    RPGTask *task = [_scene getTaskByTalkToNPC:npcId];
     if (task != nil) {
         if (![_myTaskArray containsObject:task] && ![_finishedTaskArray containsObject:task]) {
             NSLog(@"new task");
             self.currentTask = task;
-            TaskStep *step = [task currentStep];
+            RPGTaskStep *step = [task currentStep];
             [self handleStep:step];
             return;
         }
@@ -333,7 +334,7 @@
     }
     ++_talkIndex;
     if (_talkIndex != [_talkArray count]) {
-        Talk *talk = [self nextTalk];
+        RPGTalk *talk = [self nextTalk];
         NSString *content = nil;
         if ([talk.fromId isEqualToString:@"HERO"]) {
             content = [NSString stringWithFormat:@"我：%@", talk.content];
@@ -383,7 +384,7 @@
         int x = realX / _map.tileSize.width;
         int y = readY / _map.tileSize.height;
         
-        NPC *npc = [self getNpcByPositionX:x Y:y];
+        RPGNPC *npc = [self getNpcByPositionX:x Y:y];
         if(npc != nil){
             if (!_handlingTalk) {
                 [self handleTalkWithNpc:npc];

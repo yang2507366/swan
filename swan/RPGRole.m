@@ -6,9 +6,9 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Role.h"
+#import "RPGRole.h"
 
-@implementation Role
+@implementation RPGRole
 
 @synthesize position = _position;
 @synthesize roldId = _roldId;

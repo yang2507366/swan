@@ -6,10 +6,10 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Scene.h"
+#import "RPGScene.h"
 #import "Utils.h"
 
-@implementation Scene
+@implementation RPGScene
 
 @synthesize title = _title;
 @synthesize sceneId = _id;
@@ -30,7 +30,7 @@
         NSArray *npcValueList = [Utils readValueListByKey:@"npcs" src:sceneInfo];
         NSMutableArray *npcArray = [[NSMutableArray alloc] init];
         for(NSString *item in npcValueList){
-            NPC *npc = [[NPC alloc] initWithAttribute:item];
+            RPGNPC *npc = [[RPGNPC alloc] initWithAttribute:item];
             [npcArray addObject:npc];
             [npc release];
         }
@@ -40,7 +40,7 @@
         NSArray *monsterValueList = [Utils readValueListByKey:@"monsters" src:sceneInfo];
         NSMutableArray *monsterArray = [[NSMutableArray alloc] init];
         for(NSString *item in monsterValueList){
-            Monster *monster = [[Monster alloc] initWithAttribute:item];
+            RPGMonster *monster = [[RPGMonster alloc] initWithAttribute:item];
             [monsterArray addObject:monster];
             [monster release];
         }
@@ -50,7 +50,7 @@
         NSArray *taskValueList = [Utils readValueListByKey:@"tasks" src:sceneInfo];
         NSMutableArray *taskArray = [[NSMutableArray alloc] init];
         for(NSString *item in taskValueList){
-            Task *task = [[Task alloc] initWithTaskId:item];
+            RPGTask *task = [[RPGTask alloc] initWithTaskId:item];
             [taskArray addObject:task];
             [task release];
         }
@@ -60,9 +60,9 @@
     return self;
 }
 
-- (Task *)getTaskByTalkToNPC:(NSString *)npc
+- (RPGTask *)getTaskByTalkToNPC:(NSString *)npc
 {
-    for(Task *item in _taskArray){
+    for(RPGTask *item in _taskArray){
         if ([item canTriggerByTalkToNPC:npc]) {
             return item;
         }

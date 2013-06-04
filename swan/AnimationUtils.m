@@ -45,13 +45,14 @@
     NSString *info = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSArray *valueList = [Utils readValueListByKey:@"Frames" src:info];
     NSMutableArray *frames = [[NSMutableArray alloc] init];
-    CCTexture2D *texture = [[CCTexture2D alloc] initWithCGImage:[UIImage imageNamed:[Utils readValueByKey:@"ImageSource" src:info]].CGImage resolutionType:kCCResolutioniPhone];
+    NSString *imageName = [Utils readValueByKey:@"ImageSource" src:info];
+    CCTexture2D *texture = [[CCTexture2D alloc] initWithCGImage:[UIImage imageNamed:imageName].CGImage resolutionType:kCCResolutioniPhone];
     for(NSString *valueItem in valueList){
         CGRect rect = [self getAnimationRect:valueItem];
         CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:texture rect:rect];
         [frames addObject:frame];
     }
-    CCAnimation *anim = [CCAnimation animationWithFrames:frames];
+    CCAnimation *anim = [CCAnimation animationWithSpriteFrames:frames];
     anim.delayPerUnit = 0.1;
     [frames release];
     [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:animationName];

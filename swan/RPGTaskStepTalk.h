@@ -6,9 +6,9 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "TaskStep.h"
+#import "RPGTaskStep.h"
 
-@interface StepTalk : TaskStep {
+@interface RPGTaskStepTalk : RPGTaskStep {
     NSString *_dialogId;
     NSArray *_dialogArray;
 }

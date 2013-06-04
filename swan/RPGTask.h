@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TaskStep.h"
+#import "RPGTaskStep.h"
 
 typedef enum{
     TriggerTypeTalk,
@@ -19,7 +19,7 @@ typedef enum{
     TaskRequirementTypeNone
 }TaskRequirementType;
 
-@interface Task : NSObject {
+@interface RPGTask : NSObject {
     NSString *_id;
     NSString *_taskName;
     NSString *_requirement;
@@ -35,7 +35,7 @@ typedef enum{
 @property(nonatomic, readonly)NSString *taskName;
 
 - (id)initWithTaskId:(NSString *)taskId;
-- (TaskStep *)currentStep;
+- (RPGTaskStep *)currentStep;
 - (BOOL)canTriggerByTalkToNPC:(NSString *)npcId;
 - (void)resetAllStep;
 

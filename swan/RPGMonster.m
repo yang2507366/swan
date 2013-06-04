@@ -6,9 +6,9 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Monster.h"
+#import "RPGMonster.h"
 
-@implementation Monster
+@implementation RPGMonster
 
 - (id)initWithAttribute:(NSString *)attr
 {

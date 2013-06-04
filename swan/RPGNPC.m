@@ -6,9 +6,9 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "NPC.h"
+#import "RPGNPC.h"
 
-@implementation NPC
+@implementation RPGNPC
 
 - (id)initWithAttribute:(NSString *)attr
 {

@@ -13,7 +13,7 @@ typedef enum{
     RoleTypeMonster
 }RoleType;
 
-@interface Role : NSObject {
+@interface RPGRole : NSObject {
     NSString *_id;
     CGPoint _position;
     RoleType _type;

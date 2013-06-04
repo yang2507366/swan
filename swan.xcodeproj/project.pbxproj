@@ -166,15 +166,17 @@
 		3E57B547175CDB5400F037E7 /* AnimationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B543175CDB5400F037E7 /* AnimationUtils.m */; };
 		3E57B548175CDB5400F037E7 /* DialogLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B545175CDB5400F037E7 /* DialogLayer.m */; };
 		3E57B54B175CDB6800F037E7 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B54A175CDB6800F037E7 /* Utils.m */; };
-		3E57B55F175CDB7700F037E7 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B54E175CDB7700F037E7 /* Monster.m */; };
-		3E57B560175CDB7700F037E7 /* NPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B550175CDB7700F037E7 /* NPC.m */; };
-		3E57B561175CDB7700F037E7 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B552175CDB7700F037E7 /* Role.m */; };
-		3E57B562175CDB7700F037E7 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B554175CDB7700F037E7 /* Scene.m */; };
-		3E57B563175CDB7700F037E7 /* StepKillMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B556175CDB7700F037E7 /* StepKillMonster.m */; };
-		3E57B564175CDB7700F037E7 /* StepTalk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B558175CDB7700F037E7 /* StepTalk.m */; };
-		3E57B565175CDB7700F037E7 /* Talk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B55A175CDB7700F037E7 /* Talk.m */; };
-		3E57B566175CDB7700F037E7 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B55C175CDB7700F037E7 /* Task.m */; };
-		3E57B567175CDB7700F037E7 /* TaskStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B55E175CDB7700F037E7 /* TaskStep.m */; };
+		3E57B55F175CDB7700F037E7 /* RPGMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B54E175CDB7700F037E7 /* RPGMonster.m */; };
+		3E57B560175CDB7700F037E7 /* RPGNPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B550175CDB7700F037E7 /* RPGNPC.m */; };
+		3E57B561175CDB7700F037E7 /* RPGRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B552175CDB7700F037E7 /* RPGRole.m */; };
+		3E57B562175CDB7700F037E7 /* RPGScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B554175CDB7700F037E7 /* RPGScene.m */; };
+		3E57B563175CDB7700F037E7 /* RPGTaskStepKillMonster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B556175CDB7700F037E7 /* RPGTaskStepKillMonster.m */; };
+		3E57B564175CDB7700F037E7 /* RPGTaskStepTalk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B558175CDB7700F037E7 /* RPGTaskStepTalk.m */; };
+		3E57B565175CDB7700F037E7 /* RPGTalk.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B55A175CDB7700F037E7 /* RPGTalk.m */; };
+		3E57B566175CDB7700F037E7 /* RPGTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B55C175CDB7700F037E7 /* RPGTask.m */; };
+		3E57B567175CDB7700F037E7 /* RPGTaskStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E57B55E175CDB7700F037E7 /* RPGTaskStep.m */; };
+		3E7E22BE175DB93800C241A0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E22BD175DB93800C241A0 /* Default-568h@2x.png */; };
+		3E7E22C1175DB9FE00C241A0 /* PlaygroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E22C0175DB9FE00C241A0 /* PlaygroundLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -477,24 +479,27 @@
 		3E57B545175CDB5400F037E7 /* DialogLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogLayer.m; sourceTree = "<group>"; };
 		3E57B549175CDB6800F037E7 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		3E57B54A175CDB6800F037E7 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		3E57B54D175CDB7700F037E7 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
-		3E57B54E175CDB7700F037E7 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
-		3E57B54F175CDB7700F037E7 /* NPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPC.h; sourceTree = "<group>"; };
-		3E57B550175CDB7700F037E7 /* NPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPC.m; sourceTree = "<group>"; };
-		3E57B551175CDB7700F037E7 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
-		3E57B552175CDB7700F037E7 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Role.m; sourceTree = "<group>"; };
-		3E57B553175CDB7700F037E7 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		3E57B554175CDB7700F037E7 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
-		3E57B555175CDB7700F037E7 /* StepKillMonster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepKillMonster.h; sourceTree = "<group>"; };
-		3E57B556175CDB7700F037E7 /* StepKillMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepKillMonster.m; sourceTree = "<group>"; };
-		3E57B557175CDB7700F037E7 /* StepTalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTalk.h; sourceTree = "<group>"; };
-		3E57B558175CDB7700F037E7 /* StepTalk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTalk.m; sourceTree = "<group>"; };
-		3E57B559175CDB7700F037E7 /* Talk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Talk.h; sourceTree = "<group>"; };
-		3E57B55A175CDB7700F037E7 /* Talk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Talk.m; sourceTree = "<group>"; };
-		3E57B55B175CDB7700F037E7 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		3E57B55C175CDB7700F037E7 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
-		3E57B55D175CDB7700F037E7 /* TaskStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskStep.h; sourceTree = "<group>"; };
-		3E57B55E175CDB7700F037E7 /* TaskStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskStep.m; sourceTree = "<group>"; };
+		3E57B54D175CDB7700F037E7 /* RPGMonster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGMonster.h; sourceTree = "<group>"; };
+		3E57B54E175CDB7700F037E7 /* RPGMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGMonster.m; sourceTree = "<group>"; };
+		3E57B54F175CDB7700F037E7 /* RPGNPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGNPC.h; sourceTree = "<group>"; };
+		3E57B550175CDB7700F037E7 /* RPGNPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGNPC.m; sourceTree = "<group>"; };
+		3E57B551175CDB7700F037E7 /* RPGRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGRole.h; sourceTree = "<group>"; };
+		3E57B552175CDB7700F037E7 /* RPGRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGRole.m; sourceTree = "<group>"; };
+		3E57B553175CDB7700F037E7 /* RPGScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGScene.h; sourceTree = "<group>"; };
+		3E57B554175CDB7700F037E7 /* RPGScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGScene.m; sourceTree = "<group>"; };
+		3E57B555175CDB7700F037E7 /* RPGTaskStepKillMonster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGTaskStepKillMonster.h; sourceTree = "<group>"; };
+		3E57B556175CDB7700F037E7 /* RPGTaskStepKillMonster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGTaskStepKillMonster.m; sourceTree = "<group>"; };
+		3E57B557175CDB7700F037E7 /* RPGTaskStepTalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGTaskStepTalk.h; sourceTree = "<group>"; };
+		3E57B558175CDB7700F037E7 /* RPGTaskStepTalk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGTaskStepTalk.m; sourceTree = "<group>"; };
+		3E57B559175CDB7700F037E7 /* RPGTalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGTalk.h; sourceTree = "<group>"; };
+		3E57B55A175CDB7700F037E7 /* RPGTalk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGTalk.m; sourceTree = "<group>"; };
+		3E57B55B175CDB7700F037E7 /* RPGTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGTask.h; sourceTree = "<group>"; };
+		3E57B55C175CDB7700F037E7 /* RPGTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGTask.m; sourceTree = "<group>"; };
+		3E57B55D175CDB7700F037E7 /* RPGTaskStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGTaskStep.h; sourceTree = "<group>"; };
+		3E57B55E175CDB7700F037E7 /* RPGTaskStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPGTaskStep.m; sourceTree = "<group>"; };
+		3E7E22BD175DB93800C241A0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		3E7E22BF175DB9FE00C241A0 /* PlaygroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundLayer.h; sourceTree = "<group>"; };
+		3E7E22C0175DB9FE00C241A0 /* PlaygroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +576,7 @@
 		3E57B37B175CDA8500F037E7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E7E22BD175DB93800C241A0 /* Default-568h@2x.png */,
 				3E57B37C175CDA8500F037E7 /* Default.png */,
 				3E57B37E175CDA8500F037E7 /* Default-Landscape~ipad.png */,
 				3E57B380175CDA8500F037E7 /* fps_images.png */,
@@ -995,6 +1001,8 @@
 				3E57B545175CDB5400F037E7 /* DialogLayer.m */,
 				3E57B549175CDB6800F037E7 /* Utils.h */,
 				3E57B54A175CDB6800F037E7 /* Utils.m */,
+				3E7E22BF175DB9FE00C241A0 /* PlaygroundLayer.h */,
+				3E7E22C0175DB9FE00C241A0 /* PlaygroundLayer.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -1002,24 +1010,24 @@
 		3E57B54C175CDB6D00F037E7 /* rpg */ = {
 			isa = PBXGroup;
 			children = (
-				3E57B54D175CDB7700F037E7 /* Monster.h */,
-				3E57B54E175CDB7700F037E7 /* Monster.m */,
-				3E57B54F175CDB7700F037E7 /* NPC.h */,
-				3E57B550175CDB7700F037E7 /* NPC.m */,
-				3E57B551175CDB7700F037E7 /* Role.h */,
-				3E57B552175CDB7700F037E7 /* Role.m */,
-				3E57B553175CDB7700F037E7 /* Scene.h */,
-				3E57B554175CDB7700F037E7 /* Scene.m */,
-				3E57B555175CDB7700F037E7 /* StepKillMonster.h */,
-				3E57B556175CDB7700F037E7 /* StepKillMonster.m */,
-				3E57B557175CDB7700F037E7 /* StepTalk.h */,
-				3E57B558175CDB7700F037E7 /* StepTalk.m */,
-				3E57B559175CDB7700F037E7 /* Talk.h */,
-				3E57B55A175CDB7700F037E7 /* Talk.m */,
-				3E57B55B175CDB7700F037E7 /* Task.h */,
-				3E57B55C175CDB7700F037E7 /* Task.m */,
-				3E57B55D175CDB7700F037E7 /* TaskStep.h */,
-				3E57B55E175CDB7700F037E7 /* TaskStep.m */,
+				3E57B54D175CDB7700F037E7 /* RPGMonster.h */,
+				3E57B54E175CDB7700F037E7 /* RPGMonster.m */,
+				3E57B54F175CDB7700F037E7 /* RPGNPC.h */,
+				3E57B550175CDB7700F037E7 /* RPGNPC.m */,
+				3E57B551175CDB7700F037E7 /* RPGRole.h */,
+				3E57B552175CDB7700F037E7 /* RPGRole.m */,
+				3E57B553175CDB7700F037E7 /* RPGScene.h */,
+				3E57B554175CDB7700F037E7 /* RPGScene.m */,
+				3E57B555175CDB7700F037E7 /* RPGTaskStepKillMonster.h */,
+				3E57B556175CDB7700F037E7 /* RPGTaskStepKillMonster.m */,
+				3E57B557175CDB7700F037E7 /* RPGTaskStepTalk.h */,
+				3E57B558175CDB7700F037E7 /* RPGTaskStepTalk.m */,
+				3E57B559175CDB7700F037E7 /* RPGTalk.h */,
+				3E57B55A175CDB7700F037E7 /* RPGTalk.m */,
+				3E57B55B175CDB7700F037E7 /* RPGTask.h */,
+				3E57B55C175CDB7700F037E7 /* RPGTask.m */,
+				3E57B55D175CDB7700F037E7 /* RPGTaskStep.h */,
+				3E57B55E175CDB7700F037E7 /* RPGTaskStep.m */,
 			);
 			name = rpg;
 			sourceTree = "<group>";
@@ -1116,6 +1124,7 @@
 				3E57B53C175CDB0000F037E7 /* HeroWalkRight.frames in Resources */,
 				3E57B53D175CDB0000F037E7 /* HeroWalkDown.frames in Resources */,
 				3E57B53E175CDB0000F037E7 /* HeroWalkUp.frames in Resources */,
+				3E7E22BE175DB93800C241A0 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,15 +1243,16 @@
 				3E57B547175CDB5400F037E7 /* AnimationUtils.m in Sources */,
 				3E57B548175CDB5400F037E7 /* DialogLayer.m in Sources */,
 				3E57B54B175CDB6800F037E7 /* Utils.m in Sources */,
-				3E57B55F175CDB7700F037E7 /* Monster.m in Sources */,
-				3E57B560175CDB7700F037E7 /* NPC.m in Sources */,
-				3E57B561175CDB7700F037E7 /* Role.m in Sources */,
-				3E57B562175CDB7700F037E7 /* Scene.m in Sources */,
-				3E57B563175CDB7700F037E7 /* StepKillMonster.m in Sources */,
-				3E57B564175CDB7700F037E7 /* StepTalk.m in Sources */,
-				3E57B565175CDB7700F037E7 /* Talk.m in Sources */,
-				3E57B566175CDB7700F037E7 /* Task.m in Sources */,
-				3E57B567175CDB7700F037E7 /* TaskStep.m in Sources */,
+				3E57B55F175CDB7700F037E7 /* RPGMonster.m in Sources */,
+				3E57B560175CDB7700F037E7 /* RPGNPC.m in Sources */,
+				3E57B561175CDB7700F037E7 /* RPGRole.m in Sources */,
+				3E57B562175CDB7700F037E7 /* RPGScene.m in Sources */,
+				3E57B563175CDB7700F037E7 /* RPGTaskStepKillMonster.m in Sources */,
+				3E57B564175CDB7700F037E7 /* RPGTaskStepTalk.m in Sources */,
+				3E57B565175CDB7700F037E7 /* RPGTalk.m in Sources */,
+				3E57B566175CDB7700F037E7 /* RPGTask.m in Sources */,
+				3E57B567175CDB7700F037E7 /* RPGTaskStep.m in Sources */,
+				3E7E22C1175DB9FE00C241A0 /* PlaygroundLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1346,6 +1356,7 @@
 				3E57B4FF175CDA8700F037E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

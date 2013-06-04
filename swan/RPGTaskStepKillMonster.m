@@ -6,10 +6,10 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "StepKillMonster.h"
+#import "RPGTaskStepKillMonster.h"
 #import "Utils.h"
 
-@implementation StepKillMonster
+@implementation RPGTaskStepKillMonster
 
 @synthesize killedCount = _killedCount;
 @synthesize needAmount = _needAmount;

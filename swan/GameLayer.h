@@ -10,8 +10,8 @@
 #import "cocos2d.h"
 #import "DialogLayer.h"
 
-#import "Scene.h"
-#import "Task.h"
+#import "RPGScene.h"
+#import "RPGTask.h"
 
 #define SPEED 7
 
@@ -41,17 +41,17 @@ typedef enum{
     
     DialogLayer *_dialog;
     
-    Scene *_scene;
+    RPGScene *_scene;
     NSMutableArray *_myTaskArray;
     NSMutableArray *_finishedTaskArray;
     NSArray *_talkArray;
     NSInteger _talkIndex;
-    Task *_currentTask;
+    RPGTask *_currentTask;
     
     NSMutableArray *_npcArray;
 }
 
-@property(nonatomic, retain)Task *currentTask;
+@property(nonatomic, retain)RPGTask *currentTask;
 
 + (CCScene *)scene;
 

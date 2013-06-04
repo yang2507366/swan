@@ -6,12 +6,12 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Task.h"
+#import "RPGTask.h"
 #import "Utils.h"
-#import "StepTalk.h"
-#import "StepKillMonster.h"
+#import "RPGTaskStepTalk.h"
+#import "RPGTaskStepKillMonster.h"
 
-@implementation Task
+@implementation RPGTask
 
 @synthesize taskName = _taskName;
 
@@ -55,12 +55,12 @@
             NSMutableArray *stepArray = [[NSMutableArray alloc] init];
             for(NSString *item in stepStrArray){
                 if (![[item stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
-                    TaskStepType stepType = [TaskStep getTaskTypeByAttribute:item];
-                    TaskStep *step = nil;
+                    TaskStepType stepType = [RPGTaskStep getTaskTypeByAttribute:item];
+                    RPGTaskStep *step = nil;
                     if (stepType == TaskStepTypeTalk) {
-                        step = [[StepTalk alloc] initTaskStepWithAttribute:item];
+                        step = [[RPGTaskStepTalk alloc] initTaskStepWithAttribute:item];
                     }else if(stepType == TaskStepTypeKillMonster){
-                        step = [[StepKillMonster alloc] initTaskStepWithAttribute:item];
+                        step = [[RPGTaskStepKillMonster alloc] initTaskStepWithAttribute:item];
                     }
                     [stepArray addObject:step];
                 }
@@ -81,11 +81,11 @@
     return NO;
 }
 
-- (TaskStep *)currentStep
+- (RPGTaskStep *)currentStep
 {
-    TaskStep *targetStep = nil;
+    RPGTaskStep *targetStep = nil;
     for(NSInteger i = 0; i < [_stepArray count]; ++i){
-        TaskStep *step = [_stepArray objectAtIndex:i];
+        RPGTaskStep *step = [_stepArray objectAtIndex:i];
         if (![step isDone]) {
             targetStep = step;
             break;
@@ -97,7 +97,7 @@
 - (void)resetAllStep
 {
     for(NSInteger i = 0; i < [_stepArray count]; ++i){
-        TaskStep *step = [_stepArray objectAtIndex:i];
+        RPGTaskStep *step = [_stepArray objectAtIndex:i];
         step.isDone = NO;
     }
 }

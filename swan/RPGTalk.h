@@ -13,7 +13,7 @@ typedef enum{
     TalkTypeAskTask
 }TalkType;
 
-@interface Talk : NSObject {
+@interface RPGTalk : NSObject {
     NSString *_fromId;
     NSString *_content;
     TalkType _type;

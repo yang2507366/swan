@@ -6,10 +6,10 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Talk.h"
+#import "RPGTalk.h"
 #import "Utils.h"
 
-@implementation Talk
+@implementation RPGTalk
 
 @synthesize fromId = _fromId;
 @synthesize content = _content;

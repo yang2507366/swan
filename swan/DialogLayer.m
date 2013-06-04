@@ -26,9 +26,9 @@
     _isContentClicked = NO;
     [self setVisible:!hidden];
     if (!hidden) {
-        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
     }else{
-        [[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
+        [[[CCDirector sharedDirector] touchDispatcher] removeDelegate:self];
     }
 }
 
@@ -56,7 +56,7 @@
         _talkContent.position = ccp(_talkContent.textureRect.size.width / 2 + 10, 80);
         [self addChild:_talkContent];
         
-        [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
     }
     return self;
 }

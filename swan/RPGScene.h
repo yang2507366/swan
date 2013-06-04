@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Task.h"
-#import "NPC.h"
-#import "Monster.h"
+#import "RPGTask.h"
+#import "RPGNPC.h"
+#import "RPGMonster.h"
 
-@interface Scene : NSObject {
+@interface RPGScene : NSObject {
     NSString *_title;
     NSString *_id;
     NSArray *_taskArray;
@@ -25,6 +25,6 @@
 @property(nonatomic, readonly)NSArray *monsterArray;
 
 - (id)initWithScriptName:(NSString *)scriptFile;
-- (Task *)getTaskByTalkToNPC:(NSString *)npc;
+- (RPGTask *)getTaskByTalkToNPC:(NSString *)npc;
 
 @end

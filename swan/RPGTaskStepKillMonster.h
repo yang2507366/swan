@@ -6,9 +6,9 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "TaskStep.h"
+#import "RPGTaskStep.h"
 
-@interface StepKillMonster : TaskStep {
+@interface RPGTaskStepKillMonster : RPGTaskStep {
     NSString *_monsterId;
     NSInteger _needAmount;
     NSInteger _killedCount;

@@ -14,7 +14,7 @@ typedef enum{
     TaskStepTypeUnknown
 }TaskStepType;
 
-@interface TaskStep : NSObject {
+@interface RPGTaskStep : NSObject {
     BOOL _done;
     TaskStepType _type;
     NSString *_targetId;

@@ -6,10 +6,10 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "TaskStep.h"
+#import "RPGTaskStep.h"
 #import "Utils.h"
 
-@implementation TaskStep
+@implementation RPGTaskStep
 
 @synthesize isDone = _done;
 @synthesize type = _type;
@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         // Initialization code here.
-        _type = [TaskStep getTaskTypeByAttribute:attr];
+        _type = [RPGTaskStep getTaskTypeByAttribute:attr];
         _targetId = [[Utils readAttributeByKey:@"TARGET" src:attr] retain];
         _done = NO;
     }

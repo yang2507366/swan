@@ -6,11 +6,11 @@
 //  Copyright 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "StepTalk.h"
+#import "RPGTaskStepTalk.h"
 #import "Utils.h"
-#import "Talk.h"
+#import "RPGTalk.h"
 
-@implementation StepTalk
+@implementation RPGTaskStepTalk
 
 @synthesize dialogArray = _dialogArray;
 
@@ -28,7 +28,7 @@
         NSMutableArray *dialogArray = [[NSMutableArray alloc] init];
         for(NSString *item in talkStrArray){
             if (![[item stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
-                Talk *talk = [[Talk alloc] initWithAttribute:item];
+                RPGTalk *talk = [[RPGTalk alloc] initWithAttribute:item];
                 [dialogArray addObject:talk];
                 [talk release];
             }
