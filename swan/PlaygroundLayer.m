@@ -89,9 +89,9 @@ typedef enum{
         }
         
         CCLabelTTF *lbl = [[[CCLabelTTF alloc] initWithString:npc.roldId
-                                                  dimensions:CGSizeMake(80, 20)
-                                                  hAlignment:UITextAlignmentCenter
-                                                    fontName:@"Arial" fontSize:12.0f] autorelease];
+                                                   dimensions:CGSizeMake(80, 20)
+                                                   hAlignment:UITextAlignmentCenter
+                                                     fontName:@"Arial" fontSize:12.0f] autorelease];
         lbl.position = CGPointMake(sprite.position.x, sprite.position.y - 16);
         [self.map addChild:lbl z:7];
         [self.map addChild:sprite z:8];
