@@ -47,7 +47,30 @@ static void drawCircle(CGPoint position, CGSize size)
 
 - (void)draw
 {
-    drawCircle(self.frame.origin, self.frame.size);
+    if(self.image){
+    }else{
+        drawCircle(self.frame.origin, self.frame.size);
+    }
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    return YES;
+}
+
+- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"begin:%f,%f,%f,%f, %@", self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height, touches);
+}
+
+- (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"end:%f,%f,%f,%f, %@", self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height, touches);
+}
+
+- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
 }
 
 @end
