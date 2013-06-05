@@ -12,6 +12,7 @@
 #import "IntroLayer.h"
 #import "PlaygroundLayer.h"
 #import "GameLayer.h"
+#import "PigScene.h"
 
 @implementation AppController
 
@@ -75,7 +76,7 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [PlaygroundLayer scene]];
+	[director_ pushScene:[[PigScene new] autorelease]];
 
 	
 	// Create a Navigation Controller with the Director
