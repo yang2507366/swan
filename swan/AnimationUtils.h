@@ -12,6 +12,7 @@
 @interface AnimationUtils : NSObject
 
 + (CGRect)getAnimationRect:(NSString *)str;
-+ (void)cacheAnimation:(NSString *)animationName;
++ (NSArray *)cacheAnimation:(NSString *)animationName;
++ (CCAnimation *)animationByName:(NSString *)animationName;
 
 @end

@@ -10,23 +10,7 @@
 #import "AnimationUtils.h"
 #import "RPGScene.h"
 
-typedef enum{
-    RoleDirectionLeft,
-    RoleDirectionRight,
-    RoleDirectionUp,
-    RoleDirectionDown
-}RoleDirection;
-
 @interface PlaygroundLayer ()
-
-@property(nonatomic, retain)CCTMXTiledMap *map;
-@property(nonatomic, retain)CCTMXLayer *collisionLayer;
-@property(nonatomic, retain)CCSprite *hero;
-@property(nonatomic, assign)CGPoint heroPosition;
-@property(nonatomic, assign)RoleDirection heroDirection;
-@property(nonatomic, retain)NSMutableArray *myTaskArray;
-@property(nonatomic, retain)NSMutableArray *finishedTaskArray;
-@property(nonatomic, retain)RPGScene *scene;
 
 @end
 
@@ -44,31 +28,18 @@ typedef enum{
 {
     self = [super init];
     
-    [AnimationUtils cacheAnimation:@"HeroWalkUp"];
-    [AnimationUtils cacheAnimation:@"HeroWalkDown"];
-    [AnimationUtils cacheAnimation:@"HeroWalkLeft"];
-    [AnimationUtils cacheAnimation:@"HeroWalkRight"];
+    [self scheduleUpdate];
     
     return self;
 }
 
 - (void)onEnter
 {
-    // init map
-    [[CCTextureCache sharedTextureCache] addImage:@"map.png"];
-    self.map = [CCTMXTiledMap tiledMapWithTMXFile:@"untitled.tmx"];
-    [self addChild:self.map z:-1];
-    self.collisionLayer = [self.map layerNamed:@"collision"];
-    self.collisionLayer.visible = NO;
-    // init hero
-    self.hero = [[[CCSprite alloc] init] autorelease];
-    self.hero.position = ccp(144, 200);
-    self.heroPosition = self.hero.position;
-    self.heroDirection = RoleDirectionUp;
-    CCAnimation *tmpAnimation = [[CCAnimationCache sharedAnimationCache] animationByName:@"HeroWalkUp"];
-    tmpAnimation.restoreOriginalFrame = YES;
-    [self.hero runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:tmpAnimation]]];
-    [self addChild:self.hero];
+    NSArray *frames = [AnimationUtils cacheAnimation:@"HeroWalkRight"];
+    CCSprite *sprite = [[[CCSprite alloc] initWithSpriteFrame:[frames objectAtIndex:0]] autorelease];
+    sprite.position = ccp(144, 144);
+    [self addChild:sprite];
+    [sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[AnimationUtils animationByName:@"HeroWalkRight"]]]];
 }
 
 @end

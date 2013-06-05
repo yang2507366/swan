@@ -39,23 +39,31 @@
     return CGRectMake(x, y, width, height);
 }
 
-+ (void)cacheAnimation:(NSString *)animationName
++ (NSArray *)cacheAnimation:(NSString *)animationName
 {
     NSString *filePath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.frames", animationName]];
     NSString *info = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSArray *valueList = [Utils readValueListByKey:@"Frames" src:info];
-    NSMutableArray *frames = [[NSMutableArray alloc] init];
+    NSMutableArray *frames = [NSMutableArray array];
     NSString *imageName = [Utils readValueByKey:@"ImageSource" src:info];
-    CCTexture2D *texture = [[CCTexture2D alloc] initWithCGImage:[UIImage imageNamed:imageName].CGImage resolutionType:kCCResolutioniPhone];
+    UIImage *sourceImage = [UIImage imageNamed:imageName];
+    CCTexture2D *texture = [[CCTexture2D alloc] initWithCGImage:sourceImage.CGImage resolutionType:kCCResolutioniPhone];
     for(NSString *valueItem in valueList){
         CGRect rect = [self getAnimationRect:valueItem];
-        CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:texture rect:rect];
+        CCSpriteFrame *frame = [CCSpriteFrame frameWithTexture:texture rectInPixels:rect rotated:NO offset:CGPointZero originalSize:sourceImage.size];
         [frames addObject:frame];
     }
     CCAnimation *anim = [CCAnimation animationWithSpriteFrames:frames];
     anim.delayPerUnit = 0.1;
-    [frames release];
     [[CCAnimationCache sharedAnimationCache] addAnimation:anim name:animationName];
+    
+    return frames;
+}
+
++ (CCAnimation *)animationByName:(NSString *)animationName
+{
+    CCAnimation *anim = [[CCAnimationCache sharedAnimationCache] animationByName:animationName];
+    return anim;
 }
 
 @end

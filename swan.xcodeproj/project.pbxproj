@@ -522,6 +522,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E280778175EFEB10022045C /* map */ = {
+			isa = PBXGroup;
+			children = (
+				3E57B529175CDB0000F037E7 /* map.png */,
+				3E57B528175CDB0000F037E7 /* untitled.tmx */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		3E280779175EFEE50022045C /* role */ = {
+			isa = PBXGroup;
+			children = (
+				3E57B520175CDB0000F037E7 /* Nigolas.png */,
+				3E57B521175CDB0000F037E7 /* Nigolas.frames */,
+				3E57B522175CDB0000F037E7 /* Aria.png */,
+				3E57B523175CDB0000F037E7 /* Aria.frames */,
+				3E57B524175CDB0000F037E7 /* Oliver.png */,
+				3E57B525175CDB0000F037E7 /* Oliver.frames */,
+				3E57B527175CDB0000F037E7 /* HeroWalk.png */,
+				3E57B526175CDB0000F037E7 /* HeroAttack.png */,
+				3E57B52B175CDB0000F037E7 /* HeroWalkLeft.frames */,
+				3E57B52C175CDB0000F037E7 /* HeroWalkRight.frames */,
+				3E57B52D175CDB0000F037E7 /* HeroWalkDown.frames */,
+				3E57B52E175CDB0000F037E7 /* HeroWalkUp.frames */,
+			);
+			name = role;
+			sourceTree = "<group>";
+		};
 		3E57B35C175CDA8500F037E7 = {
 			isa = PBXGroup;
 			children = (
@@ -940,6 +968,8 @@
 		3E57B500175CDAAA00F037E7 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				3E280779175EFEE50022045C /* role */,
+				3E280778175EFEB10022045C /* map */,
 				3E57B51E175CDADC00F037E7 /* img */,
 				3E57B501175CDAC300F037E7 /* rpg */,
 			);
@@ -971,20 +1001,6 @@
 			isa = PBXGroup;
 			children = (
 				3E57B51F175CDB0000F037E7 /* dialog_bg.png */,
-				3E57B520175CDB0000F037E7 /* Nigolas.png */,
-				3E57B521175CDB0000F037E7 /* Nigolas.frames */,
-				3E57B522175CDB0000F037E7 /* Aria.png */,
-				3E57B523175CDB0000F037E7 /* Aria.frames */,
-				3E57B524175CDB0000F037E7 /* Oliver.png */,
-				3E57B525175CDB0000F037E7 /* Oliver.frames */,
-				3E57B526175CDB0000F037E7 /* HeroAttack.png */,
-				3E57B527175CDB0000F037E7 /* HeroWalk.png */,
-				3E57B528175CDB0000F037E7 /* untitled.tmx */,
-				3E57B529175CDB0000F037E7 /* map.png */,
-				3E57B52B175CDB0000F037E7 /* HeroWalkLeft.frames */,
-				3E57B52C175CDB0000F037E7 /* HeroWalkRight.frames */,
-				3E57B52D175CDB0000F037E7 /* HeroWalkDown.frames */,
-				3E57B52E175CDB0000F037E7 /* HeroWalkUp.frames */,
 			);
 			name = img;
 			sourceTree = "<group>";
