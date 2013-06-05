@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E4369DC175F6D6700352CE8 /* PigScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4369DB175F6D6700352CE8 /* PigScene.m */; };
 		3E4369DF175F6EDE00352CE8 /* ControlPadLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4369DE175F6EDE00352CE8 /* ControlPadLayer.m */; };
+		3E4369E2175F825000352CE8 /* ControlButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4369E1175F825000352CE8 /* ControlButton.m */; };
 		3E57B369175CDA8500F037E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E57B368175CDA8500F037E7 /* QuartzCore.framework */; };
 		3E57B36B175CDA8500F037E7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E57B36A175CDA8500F037E7 /* OpenGLES.framework */; };
 		3E57B36D175CDA8500F037E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E57B36C175CDA8500F037E7 /* OpenAL.framework */; };
@@ -186,6 +187,8 @@
 		3E4369DB175F6D6700352CE8 /* PigScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PigScene.m; sourceTree = "<group>"; };
 		3E4369DD175F6EDD00352CE8 /* ControlPadLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPadLayer.h; sourceTree = "<group>"; };
 		3E4369DE175F6EDE00352CE8 /* ControlPadLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlPadLayer.m; sourceTree = "<group>"; };
+		3E4369E0175F825000352CE8 /* ControlButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlButton.h; sourceTree = "<group>"; };
+		3E4369E1175F825000352CE8 /* ControlButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlButton.m; sourceTree = "<group>"; };
 		3E57B365175CDA8500F037E7 /* swan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E57B368175CDA8500F037E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E57B36A175CDA8500F037E7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1029,6 +1032,8 @@
 				3E4369DB175F6D6700352CE8 /* PigScene.m */,
 				3E4369DD175F6EDD00352CE8 /* ControlPadLayer.h */,
 				3E4369DE175F6EDE00352CE8 /* ControlPadLayer.m */,
+				3E4369E0175F825000352CE8 /* ControlButton.h */,
+				3E4369E1175F825000352CE8 /* ControlButton.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -1281,6 +1286,7 @@
 				3E7E22C1175DB9FE00C241A0 /* PlaygroundLayer.m in Sources */,
 				3E4369DC175F6D6700352CE8 /* PigScene.m in Sources */,
 				3E4369DF175F6EDE00352CE8 /* ControlPadLayer.m in Sources */,
+				3E4369E2175F825000352CE8 /* ControlButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
